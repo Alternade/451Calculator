@@ -12,7 +12,12 @@ function multiplication () {
         cal=$(($a*$b))
         echo "Mul of two numbers is = $cal"
 }
-#multiplication
+#multiplication feature 
+function division () {
+        cal=$(($a/$b))
+        echo "Div of two numbers is = $cal"
+}
+#multiplication feature
 
 echo "Enter a Number"
 read a
@@ -22,19 +27,27 @@ read b
 echo "Enter 1 for Addition"
 echo "Enter 2 for Substraction"
 echo "Enter 3 for Multiplication"
+echo "Enter 4 for Division"
 
 read check
 
-if [ $check -eq 1 ]
-then 
-	addition
-elif [ $check -eq 2 ]
-then
-	substraction
+case $check in
+	1) 
+		addition
+		;;
+	2)
+		substraction
+		;;
+	3)
+		multiplication
+		;;
+	4)
+		division
+		;;
+	*)
+		echo "Invalid input"
+		;;
+esac
 
-elif [ $check -eq 3 ]
-then
-        multiplication
-else 
-	echo "Invalid Input"
-fi
+
+
