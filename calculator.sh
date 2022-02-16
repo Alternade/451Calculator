@@ -1,6 +1,6 @@
-function addition () {
-	cal=$(($a+$b))
-	echo "Sum of two numbers is = $cal"
+function substraction () {
+	cal=$(($a-$b))
+	echo "Sub of two numbers is = $cal"
 }
 
 
@@ -10,13 +10,13 @@ read a
 echo "Enter another number"
 read b 
 
-echo "Enter 1 for addition"
+echo "Enter 1 for Substraction"
 
 read check
 
 if [ $check -eq 1 ]
 then 
-	addition
+	substraction
 else 
 	echo "Invalid Input"
 fi
